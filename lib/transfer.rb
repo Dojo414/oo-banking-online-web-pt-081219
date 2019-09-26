@@ -14,4 +14,9 @@ class Transfer
       return false
     end
   end
+  
+  def execute_transaction
+    if @sender.valid?
+      @receiver.amount += @amount
+      @sender.amount -= @amount
 end
