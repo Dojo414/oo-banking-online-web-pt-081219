@@ -19,4 +19,9 @@ class Transfer
     if @sender.valid?
       @receiver.amount += @amount
       @sender.amount -= @amount
+      @status = "complete"
+    end
+    return
+  end
+    
 end
