@@ -20,7 +20,7 @@ class Transfer
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
-    else
+    elsif @sender.balance < @amount
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
